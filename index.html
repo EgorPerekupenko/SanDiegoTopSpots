@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>San Diego Top Spots </title>
+  <title>San Diego Top Spots </title>
 <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-</head>	
+<link rel="stylesheet" type="text/css" href="map.css">
+</head> 
 <body>
 <h1>San Diego Top Spots</h1>
-<table id="table" class="table table-striped">
+<div id="map" >
+</div>
+<table id="table" class="table table-striped" >
     <thead>
-    	<tr>
-    	   <th>Name</th>
-    	   <th>Description</th>
-    	   <th>Link</th>
-    	</tr>   
+      <tr>
+         <th>Name</th>
+         <th>Description</th>
+         <th>Link</th>
+      </tr>   
     </thead>
   <tbody>
-  	
-
-
-
-
+    
 
   </tbody>
+</table>
+
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 32.715, lng: -117.164},
+          zoom: 14
+        });
+      }
+    </script>
+
+
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="script.js"></script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF5zkIcX0ZC6XKrd-g0empBG2NOgNaOcY&callback=initMap">
+    </script>
 </body>
 </html>
